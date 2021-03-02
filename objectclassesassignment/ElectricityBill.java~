@@ -1,0 +1,46 @@
+package ObjectClassesAssignment;
+
+public class ElectricityBill {
+
+	int meterno;
+	String name, address;
+
+	ElectricityBill(int meterno, String name, String address) {
+		this.meterno = meterno;
+		this.name = name;
+		this.address = address;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Meter no is :-" + meterno + " Name is :- " + name + " Address is " + address;
+	}
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return meterno;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj==null) {
+			return false;
+		}
+		
+		if(new Integer(this.meterno)==obj) {
+			
+			return true;
+		}
+		
+		return false;
+	}
+
+}
